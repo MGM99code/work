@@ -6,10 +6,10 @@
 '''
 IF file is FASTA:
     FOR each sequence:
-        EXTRACT label and sequence
-        CALCULATE length
+        CALCULATE length    
         IDENTIFY 'N' start/end positions and count
         COUNT '-' characters
+        EXTRACT label and sequence
         WRITE results to output file
 ELSE:
     PRINT error
