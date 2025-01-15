@@ -3,12 +3,12 @@
 '''
 IF file is FASTA:
     for each sequence:
-        check if sample ID is same
-        separate HA and NA
-ELSE:
+        if line startswith '>'
+            parse sample ID and segment
+Else:
     print error
-
 '''
+
 import os
 
 # Function to check if the file is in FASTA format
@@ -28,7 +28,6 @@ def extract_info(header):
         if segment in ['HA', 'NA']:
             return id, segment
     return None, None
-        
 
 # Main function to process the FASTA file and generate the output
 def process_fasta(input_filename):
